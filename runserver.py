@@ -53,6 +53,8 @@ def main(args):
     if args.search_re is not None:
         matches = []
         search_re = re.compile(re.escape(args.search_re[0]))
+    else:
+        search_re = None
 
     if args.formatter is None:
         formatter = format_log_advanced
